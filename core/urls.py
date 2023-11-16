@@ -18,11 +18,25 @@ from django.urls import path
 
 from django.contrib.auth import views as dj_auth_views
 
-from views import views
+from views import views, example_views
 from django.conf.urls import include
 from django.contrib import admin
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
+
+    #模板範例檔
+    # view.py
     path('', views.index),
+
+    # example_views.py
+    path('example/about/', example_views.about),
+    path('example/course/', example_views.course),
+    path('example/instructor/', example_views.instructor),
+    path('example/blog/', example_views.blog),
+    path('example/contact/', example_views.contact),
+
+    # 純網址可連到的頁面(沒放到html)
+    path('example/blog/single/', example_views.blog_single),
+    path('example/instructor/details/', example_views.instructor_details),
 ]
