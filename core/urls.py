@@ -18,19 +18,18 @@ from django.urls import path
 
 from django.contrib.auth import views as dj_auth_views
 
-from views import views, example_views, chatgpt_views
+from views import views, example_views, chatgpt_views, user_views
 from django.conf.urls import include
 from django.contrib import admin
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
 
-    # chatGPT 串接測試畫面
-    path('example/chatbot/', chatgpt_views.chatbot),
-
     # 模板範例檔
     # view.py
     path('', views.index),
+    path('user/', user_views.user),
+    path('user/edit/', user_views.uedit),
 
     # example_views.py
     path('example/about/', example_views.about),
@@ -42,4 +41,7 @@ urlpatterns = [
     # 純網址可連到的頁面(沒放到html)
     path('example/blog/single/', example_views.blog_single),
     path('example/instructor/details/', example_views.instructor_details),
+
+    # chatGPT 串接測試畫面
+    path('example/chatbot/', chatgpt_views.chatbot),
 ]
