@@ -28,6 +28,10 @@ urlpatterns = [
     # 模板範例檔
     # view.py
     path('', views.index),
+    path('login/', views.login),
+    path('register/', views.register),
+    path('forget/', views.forget),
+
     path('user/', user_views.user),
     path('user/edit/', user_views.uedit),
 

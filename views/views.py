@@ -4,3 +4,15 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'index.html')
 
+# 首頁畫面
+def login(request):
+    return render(request, 'login.html')
+
+# 首頁畫面
+def register(request):
+    return render(request, 'register.html')
+
+# 首頁畫面
+def forget(request):
+    return render(request, 'forget.html')
+
