@@ -41,6 +41,12 @@ urlpatterns = [
     path('example/instructor/', example_views.instructor),
     path('example/blog/', example_views.blog),
     path('example/contact/', example_views.contact),
+    path('example/theme/', example_views.theme),
+    path('example/pic/', example_views.pic),
+    path('example/reading/', example_views.reading),
+    path('example/gtp_reading/', example_views.gtp_reading),
+    path('example/score/', example_views.score),
+    path('example/vocabulary/', example_views.vocabulary),
 
     # 純網址可連到的頁面(沒放到html)
     path('example/blog/single/', example_views.blog_single),

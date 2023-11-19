@@ -27,3 +27,21 @@ def blog_single(request):
 # about畫面
 def instructor_details(request):
     return render(request, 'instructor-details.html')
+
+def theme(request):
+    return render(request, 'theme.html')
+
+def pic(request):
+    return render(request, 'pic.html')
+
+def reading(request):
+    return render(request, 'reading.html')
+
+def gtp_reading(request):
+    return render(request, 'gtp_reading.html')
+
+def score(request):
+    return render(request, 'score.html')
+
+def vocabulary(request):
+    return render(request, 'vocabulary.html')
