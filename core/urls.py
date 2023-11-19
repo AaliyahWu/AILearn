@@ -18,14 +18,17 @@ from django.urls import path
 
 from django.contrib.auth import views as dj_auth_views
 
-from views import views, example_views
+from views import views, example_views, chatgpt_views
 from django.conf.urls import include
 from django.contrib import admin
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
 
-    #模板範例檔
+    # chatGPT 串接測試畫面
+    path('example/chatbot/', chatgpt_views.chatbot),
+
+    # 模板範例檔
     # view.py
     path('', views.index),
 
