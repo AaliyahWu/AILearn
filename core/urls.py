@@ -45,8 +45,10 @@ urlpatterns = [
     path('score/', example_views.score),
     path('vocabulary/', example_views.vocabulary),
 
-    path('record/', example_views.record), #錯題本
-    path('record_single/', example_views.record_single), #錯題本
+    path('record/', example_views.record),  # 錯題本
+    path('record_single/', example_views.record_single),  # 錯題本
+
+    path('report/', views.report),  # 報表
 
     # example_views.py
     path('example/about/', example_views.about),

@@ -20,3 +20,7 @@ def register(request):
 def forget(request):
     return render(request, 'forget.html')
 
+# 報表
+def report(request):
+    return render(request, 'report.html')
+
