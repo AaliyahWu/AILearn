@@ -23,7 +23,6 @@ from django.conf.urls import include
 from django.contrib import admin
 from transcription.views import transcribe
 
-
 urlpatterns = [
     # path('admin/', admin.site.urls),
 
@@ -37,21 +36,22 @@ urlpatterns = [
     path('user/', user_views.user),
     path('user/edit/', user_views.uedit),
 
+    path('theme/', example_views.theme),  # 學習主選單
+    path('pic/', example_views.pic),  # 主題圖片
+    path('reading/', example_views.reading),  # 開始描述
+
+    path('gtp_reading/', example_views.gtp_reading),
+    path('score/', example_views.score),
+    path('vocabulary/', example_views.vocabulary),
+
     # example_views.py
     path('example/about/', example_views.about),
     path('example/course/', example_views.course),
     path('example/instructor/', example_views.instructor),
     path('example/blog/', example_views.blog),
     path('example/contact/', example_views.contact),
-    path('example/theme/', example_views.theme),
-    path('example/pic/', example_views.pic),
-    path('example/reading/', example_views.reading),
+
     path('transcribe/', transcribe),
-
-
-    path('example/gtp_reading/', example_views.gtp_reading),
-    path('example/score/', example_views.score),
-    path('example/vocabulary/', example_views.vocabulary),
 
     # 純網址可連到的頁面(沒放到html)
     path('example/blog/single/', example_views.blog_single),
