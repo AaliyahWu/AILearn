@@ -41,7 +41,7 @@
                 <li class="nav-item"><a href="/theme/" class="nav-link">學習主選單</a></li>
                 <li class="nav-item"><a href="/vocabulary/" class="nav-link">單字本</a></li>
                 <li class="nav-item active"><a href="/record/" class="nav-link">錯題本</a></li>
-                <li class="nav-item"><a href="/" class="nav-link">成果報表</a></li>
+                <li class="nav-item"><a href="/report/" class="nav-link">成果報表</a></li>
                 {#                <li class="nav-item"><a href="/login/" class="nav-link">登入</a></li>#}
                 <li class="nav-item"><a href="/logout/" class="nav-link">登出</a></li>
             </ul>
@@ -56,115 +56,155 @@
         <div class="row no-gutters slider-text align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate pb-5 text-center">
                 {#       <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="fa fa-chevron-right"></i></a></span> <span>Our Blog <i class="fa fa-chevron-right"></i></span></p>#}
-                <h1 class="mb-0 bread">成果報表</h1>
+                <h1 class="mb-0 bread">每週成果報表</h1>
             </div>
         </div>
     </div>
 </section>
-<section class="ftco-section bg-light">
-    <script>
-                                            var subname=[];
-                                            var hours=[];
-                                            {% for dchart_list in inform.dchart_lists %}
-                                            {% for dsubject_name in dchart_list.dsubject_name %}
-                                            subname.push('{{ dsubject_name.sub_name }}');
-                                            hours.push('{{ dchart_list.user_daysubtotal_hours }}');
-                                            {% endfor%}
-                                            {% endfor%}
-                                            var ctx = document.getElementById('myChart-4');
-                                            var myChart = new Chart(ctx, {
-                                                type: 'pie',
-                                                data: {
-                                                    labels: subname,
-                                                    datasets: [{
-                                                        backgroundColor: [
-                                                            'rgb(241, 148, 131)',
-                                                            'rgb(155, 144, 194)',
-                                                            'rgb(129,199,212)',
-                                                            'rgb(168, 216, 185)',
-                                                            'rgb(251, 226, 81)',
-                                                            'rgb(180, 165, 130)'
 
-                                                        ],
-                                                        borderColor: 'rgb(240,240,240)',
-                                                        borderWidth: 2.5,
-
-                                                        label:subname,
-
-                                                        data:hours,
-                                                        fill: false, // 是否填滿色彩
-                                                    }]
-                                                },
-                                                options: {
-                                                    legend: {
-                                                        labels: {
-                                                          fontColor: 'white' // 標籤顏色
-                                                        }
-                                                    }
-                                                }
-                                            });
-
-                                        </script>
-</section>>
 
 <section class="ftco-section bg-light">
+    {#    ####### 1#}
     <div class="container">
-            <div class="col-lg-4 ftco-animate">
+        <div class="row d-flex">
+            <div class="col-lg-4 ftco-animate" >
                 <div class="blog-entry">
-                    <a href="blog-single.html" class="block-20"
-                       style="background-image: url('/static/images/image_1.jpg');">
-                    </a>
-                    <div class="text d-block">
-                        <div class="meta">
-                            <p>
-                                <a href="#"><span class="fa fa-calendar mr-2"></span>Nov. 17, 2023</a>
-                                <a href="#"><span class="fa fa-user mr-2"></span>Test</a>
-                                {#             <a href="#" class="meta-chat"><span class="fa fa-comment mr-2"></span> 3</a>#}
-                            </p>
-                        </div>
-                        {#         <h3 class="heading"><a href="#">I'm not creative, Should I take this course?</a></h3>#}
-                        <p>There is a man, who is listening, writing ,and looking at the notebook...</p>
-                        <p><a href="/example/record_single/" class="btn btn-secondary py-2 px-3">展開</a></p>
+                    <div class="" style=" width: 150%;margin-left:-170px;"><!-- 長條圖顯示的位置 -->
+                        <canvas id="myChart"></canvas>
+
+                        <!-- 長條圖的原始程式碼, 可以移除掉長條圖就會消失 -->
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                        <script>
+                            const chartElement = document.getElementById('myChart');
+
+                            new Chart(chartElement, {
+                                type: 'bar',
+                                data: {
+                                    labels: ['1日', '10日', '20日', '30日'],
+                                    datasets: [{
+                                        label: '錯題數目',
+                                        data: [15, 13, 8, 5],
+                                    }]
+                                }
+                            });
+                        </script>
                     </div>
+                        <p style="margin-top:20px; margin-left: 40px">11月份 錯題數目長條圖</p>
+
+
+
+                    {#                    <div class="text d-block">#}
+                    {#                        <div class="meta">#}
+                    {#                            <p>#}
+                    {#                                <a href="#"><span class="fa fa-calendar mr-2"></span>Sept. 17, 2020</a>#}
+                    {#             <a href="#"><span class="fa fa-user mr-2"></span>Admin</a>#}
+                    {#             <a href="#" class="meta-chat"><span class="fa fa-comment mr-2"></span> 3</a>#}
+                    {#                            </p>#}
+                    {#                        </div>#}
+                    {#         <h3 class="heading"><a href="#">I'm not creative, Should I take this course?</a></h3>#}
+                    {##}
+                    {#                        <p><a href="/example/record_single/" class="btn btn-secondary py-2 px-3">Read more</a></p>#}
+                    {#                    </div>#}
                 </div>
             </div>
 
+
+            {#    ####### 2#}
             <div class="col-lg-4 ftco-animate">
                 <div class="blog-entry">
-                    <a href="blog-single.html" class="block-20"
-                       style="background-image: url('/static/images/image_2.jpg');">
-                    </a>
-                    <div class="text d-block">
-                        <div class="meta">
-                            <p>
-                                <a href="#"><span class="fa fa-calendar mr-2"></span>Oct. 19, 2023</a>
-                                <a href="#"><span class="fa fa-user mr-2"></span>Test</a>
-                                {#         <a href="#" class="meta-chat"><span class="fa fa-comment mr-2"></span> 3</a>#}
-                            </p>
+                    <!-- 長條圖顯示的位置 -->
+                    <center>
+                        <div class="" style="width: 80%">
+
+                            <canvas id="piemyChart"></canvas>
+                            <!-- 長條圖的原始程式碼, 可以移除掉長條圖就會消失 -->
+                            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                            <script>
+                                const chartElement1 = document.getElementById('piemyChart');
+                                const data = {
+                                    labels: [
+                                        '校園',
+                                        '交通',
+                                        '點餐',
+                                        '旅遊',
+                                    ],
+                                    datasets: [{
+                                        label: '學習時長(hr)',
+                                        data: [12, 16, 5, 29],
+                                    }]
+                                };
+                                new Chart(chartElement1, {
+                                    type: 'pie',
+                                    data: data,
+                                });
+                            </script>
+
                         </div>
-                        {#     <h3 class="heading"><a href="#">I'm not creative, Should I take this course?</a></h3>#}
-                        <p>There's a laptop on the table, and some stickers on the wall...</p>
-                        <p><a href="blog.html" class="btn btn-secondary py-2 px-3">展開</a></p>
-                    </div>
+                    </center>
+
+                    <p style="margin-top:10px; text-align: center">11月份 練習主題圓餅圖</p>
+
+                    {#                    <div class="text d-block">#}
+                    {#                        <div class="meta">#}
+                    {#                            <p>#}
+                    {#                                <a href="#"><span class="fa fa-calendar mr-2"></span>Sept. 17, 2020</a>#}
+                    {#         <a href="#"><span class="fa fa-user mr-2"></span>Admin</a>#}
+                    {#         <a href="#" class="meta-chat"><span class="fa fa-comment mr-2"></span> 3</a>#}
+                    {#                            </p>#}
+                    {#                        </div>#}
+                    {#     <h3 class="heading"><a href="#">I'm not creative, Should I take this course?</a></h3>#}
+                    {#                        <p>There's a laptop on the table, and some stickers on the wall...</p>#}
+                    {#                        <p><a href="/example/record_single1/" class="btn btn-secondary py-2 px-3">Read more</a></p>#}
+                    {#                    </div>#}
                 </div>
             </div>
+
+
+            {#    ####### 3#}
             <div class="col-lg-4 ftco-animate">
                 <div class="blog-entry">
-                    <a href="blog-single.html" class="block-20"
-                       style="background-image: url('/static/images/image_3.jpg');">
-                    </a>
-                    <div class="text d-block">
-                        <div class="meta">
-                            <p>
-                                <a href="#"><span class="fa fa-calendar mr-2"></span>Oct. 10, 2023</a>
-                                <a href="#"><span class="fa fa-user mr-2"></span>Test</a>
-                                {#       <a href="#" class="meta-chat"><span class="fa fa-comment mr-2"></span> 3</a>#}
-                            </p>
-                        </div>
-                        {#   <h3 class="heading"><a href="#">I'm not creative, Should I take this course?</a></h3>#}
-                        <p>There are a boy and a girl, they are sharing Ipad ...</p>
-                        <p><a href="blog.html" class="btn btn-secondary py-2 px-3">展開</a></p>
+                    <div class="" style="top: -50px; width: 150%">
+                        <!-- 長條圖顯示的位置 -->
+                        <canvas id="myChart123"></canvas>
+
+                        <!-- 長條圖的原始程式碼, 可以移除掉長條圖就會消失 -->
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                        <script>
+                            const chartElement123 = document.getElementById('myChart123');
+                            const data123 = {
+                                labels: [
+                                    '星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日',
+                                ],
+                                datasets: [{
+                                    label: '上課時長',
+                                    data: [1, 1.3, 2.0, 1.6, 1.7, 2, 1],
+                                }]
+                            };
+                            new Chart(chartElement123, {
+                                type: 'line',
+                                data: data123,
+                            });
+                        </script>
                     </div>
+
+                    <p style="margin-top:20px; margin-left: 200px; width: 100%" >11月份 上課時長折線圖</p>
+{#                    <p style="margin-top:20px; text-align: center">11月份 練習主題圓餅圖</p>#}
+
+{#                    <div class="text d-block">#}
+{#                        <div class="meta">#}
+{#                            <p>#}
+{#                                <a href="#"><span class="fa fa-calendar mr-2"></span>Sept. 10, 2020</a>#}
+                                {#       <a href="#"><span class="fa fa-user mr-2"></span>Admin</a>#}
+                                {#       <a href="#" class="meta-chat"><span class="fa fa-comment mr-2"></span> 3</a>#}
+{#                            </p>#}
+{#                        </div>#}
+                        {#   <h3 class="heading"><a href="#">I'm not creative, Should I take this course?</a></h3>#}
+{#                        <p>There are a boy and a girl, they are sharing Ipad ...</p>#}
+{#                        <p><a href="/example/record_single2/" class="btn btn-secondary py-2 px-3">Read more</a></p>#}
+{#                    </div>#}
                 </div>
             </div>
 
@@ -188,9 +228,6 @@
     </div>
     </div>
 </section>
-
-
-
 
 
 <!-- loader -->
