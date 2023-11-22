@@ -67,31 +67,33 @@
     {#    ####### 1#}
     <div class="container">
         <div class="row d-flex">
-            <div class="col-lg-4 ftco-animate" >
+            <div class="col-lg-4 ftco-animate">
                 <div class="blog-entry">
-                    <div class="" style=" width: 150%;margin-left:-170px;"><!-- 長條圖顯示的位置 -->
-                        <canvas id="myChart"></canvas>
+                    {#                    <div class="" style=" width: 150%;margin-left:-170px;">#}
+                    <!-- 長條圖顯示的位置 -->
+                    <canvas id="myChart"></canvas>
 
-                        <!-- 長條圖的原始程式碼, 可以移除掉長條圖就會消失 -->
-                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    <!-- 長條圖的原始程式碼, 可以移除掉長條圖就會消失 -->
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-                        <script>
-                            const chartElement = document.getElementById('myChart');
+                    <script>
+                        const chartElement = document.getElementById('myChart');
 
-                            new Chart(chartElement, {
-                                type: 'bar',
-                                data: {
-                                    labels: ['1日', '10日', '20日', '30日'],
-                                    datasets: [{
-                                        label: '錯題數目',
-                                        data: [15, 13, 8, 5],
-                                    }]
-                                }
-                            });
-                        </script>
-                    </div>
-                        <p style="margin-top:20px; margin-left: 40px">11月份 錯題數目長條圖</p>
-
+                        new Chart(chartElement, {
+                            type: 'bar',
+                            data: {
+                                labels: ['1日', '10日', '20日', '30日'],
+                                datasets: [{
+                                    label: '錯題數目',
+                                    data: [15, 13, 8, 5],
+                                }]
+                            }
+                        });
+                    </script>
+                    {#                    </div>#}
+                    {#                    <p style="margin-top:20px; margin-left: 40px">#}
+                    <center>11月份 錯題數目長條圖</center>
+                    {#                    </p>#}
 
 
                     {#                    <div class="text d-block">#}
@@ -115,36 +117,38 @@
                 <div class="blog-entry">
                     <!-- 長條圖顯示的位置 -->
                     <center>
-                        <div class="" style="width: 80%">
+                        {#                        <div class="" style="width: 80%">#}
 
-                            <canvas id="piemyChart"></canvas>
-                            <!-- 長條圖的原始程式碼, 可以移除掉長條圖就會消失 -->
-                            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                        <canvas id="piemyChart"></canvas>
+                        <!-- 長條圖的原始程式碼, 可以移除掉長條圖就會消失 -->
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-                            <script>
-                                const chartElement1 = document.getElementById('piemyChart');
-                                const data = {
-                                    labels: [
-                                        '校園',
-                                        '交通',
-                                        '點餐',
-                                        '旅遊',
-                                    ],
-                                    datasets: [{
-                                        label: '學習時長(hr)',
-                                        data: [12, 16, 5, 29],
-                                    }]
-                                };
-                                new Chart(chartElement1, {
-                                    type: 'pie',
-                                    data: data,
-                                });
-                            </script>
+                        <script>
+                            const chartElement1 = document.getElementById('piemyChart');
+                            const data = {
+                                labels: [
+                                    '校園',
+                                    '交通',
+                                    '點餐',
+                                    '旅遊',
+                                ],
+                                datasets: [{
+                                    label: '學習時長(hr)',
+                                    data: [12, 16, 5, 29],
+                                }]
+                            };
+                            new Chart(chartElement1, {
+                                type: 'pie',
+                                data: data,
+                            });
+                        </script>
 
-                        </div>
+                        {#                        </div>#}
                     </center>
 
-                    <p style="margin-top:10px; text-align: center">11月份 練習主題圓餅圖</p>
+                    {#                    <p style="margin-top:10px; text-align: center">#}
+                    <center>11月份 練習主題圓餅圖</center>
+                    {#                    </p>#}
 
                     {#                    <div class="text d-block">#}
                     {#                        <div class="meta">#}
@@ -163,48 +167,51 @@
 
 
             {#    ####### 3#}
-            <div class="col-lg-4 ftco-animate">
+            <div class="col-lg-4 ftco-animate" >
+
                 <div class="blog-entry">
-                    <div class="" style="top: -50px; width: 150%">
-                        <!-- 長條圖顯示的位置 -->
-                        <canvas id="myChart123"></canvas>
+                    {#                    <div class="" style="top: -50px; width: 150%">#}
+                    <!-- 長條圖顯示的位置 -->
+                    <canvas id="myChart123"></canvas>
 
-                        <!-- 長條圖的原始程式碼, 可以移除掉長條圖就會消失 -->
-                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    <!-- 長條圖的原始程式碼, 可以移除掉長條圖就會消失 -->
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-                        <script>
-                            const chartElement123 = document.getElementById('myChart123');
-                            const data123 = {
-                                labels: [
-                                    '星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日',
-                                ],
-                                datasets: [{
-                                    label: '上課時長',
-                                    data: [1, 1.3, 2.0, 1.6, 1.7, 2, 1],
-                                }]
-                            };
-                            new Chart(chartElement123, {
-                                type: 'line',
-                                data: data123,
-                            });
-                        </script>
-                    </div>
+                    <script>
+                        const chartElement123 = document.getElementById('myChart123');
+                        const data123 = {
+                            labels: [
+                                '星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日',
+                            ],
+                            datasets: [{
+                                label: '上課時長',
+                                data: [1, 1.3, 2.0, 1.6, 1.7, 2, 1],
+                            }]
+                        };
+                        new Chart(chartElement123, {
+                            type: 'line',
+                            data: data123,
+                        });
+                    </script>
+                    {#                    </div>#}
 
-                    <p style="margin-top:20px; margin-left: 200px; width: 100%" >11月份 上課時長折線圖</p>
-{#                    <p style="margin-top:20px; text-align: center">11月份 練習主題圓餅圖</p>#}
+                    {#                    <p style="margin-top:20px; margin-left: 200px; width: 100%">#}
+                    <center>11月份 上課時長折線圖</center>
+                    {#                    </p>#}
+                    {#                    <p style="margin-top:20px; text-align: center">11月份 練習主題圓餅圖</p>#}
 
-{#                    <div class="text d-block">#}
-{#                        <div class="meta">#}
-{#                            <p>#}
-{#                                <a href="#"><span class="fa fa-calendar mr-2"></span>Sept. 10, 2020</a>#}
-                                {#       <a href="#"><span class="fa fa-user mr-2"></span>Admin</a>#}
-                                {#       <a href="#" class="meta-chat"><span class="fa fa-comment mr-2"></span> 3</a>#}
-{#                            </p>#}
-{#                        </div>#}
-                        {#   <h3 class="heading"><a href="#">I'm not creative, Should I take this course?</a></h3>#}
-{#                        <p>There are a boy and a girl, they are sharing Ipad ...</p>#}
-{#                        <p><a href="/example/record_single2/" class="btn btn-secondary py-2 px-3">Read more</a></p>#}
-{#                    </div>#}
+                    {#                    <div class="text d-block">#}
+                    {#                        <div class="meta">#}
+                    {#                            <p>#}
+                    {#                                <a href="#"><span class="fa fa-calendar mr-2"></span>Sept. 10, 2020</a>#}
+                    {#       <a href="#"><span class="fa fa-user mr-2"></span>Admin</a>#}
+                    {#       <a href="#" class="meta-chat"><span class="fa fa-comment mr-2"></span> 3</a>#}
+                    {#                            </p>#}
+                    {#                        </div>#}
+                    {#   <h3 class="heading"><a href="#">I'm not creative, Should I take this course?</a></h3>#}
+                    {#                        <p>There are a boy and a girl, they are sharing Ipad ...</p>#}
+                    {#                        <p><a href="/example/record_single2/" class="btn btn-secondary py-2 px-3">Read more</a></p>#}
+                    {#                    </div>#}
                 </div>
             </div>
 
