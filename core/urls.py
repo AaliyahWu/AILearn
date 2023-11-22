@@ -38,9 +38,16 @@ urlpatterns = [
 
     path('theme/', example_views.theme),  # 學習主選單
     path('pic/', example_views.pic),  # 主題圖片
+    path('pic4/', example_views.pic4),
     path('reading/', example_views.reading),  # 開始描述
+    path('reading9/', example_views.reading9),
+    path('reading10/', example_views.reading10),
+    path('reading11/', example_views.reading11),
 
     path('gtp_reading/', example_views.gtp_reading),
+    path('gtp_reading9/', example_views.gtp_reading9),
+    path('gtp_reading10/', example_views.gtp_reading10),
+    path('gtp_reading11/', example_views.gtp_reading11),
     path('score/', example_views.score),
     path('vocabulary/', example_views.vocabulary),
 

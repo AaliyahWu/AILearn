@@ -34,11 +34,32 @@ def theme(request):
 def pic(request):
     return render(request, 'pic.html')
 
+def pic4(request):
+    return render(request, 'pic4.html')
+
 def reading(request):
     return render(request, 'reading.html')
 
+def reading9(request):
+    return render(request, 'reading9.html')
+
+def reading10(request):
+    return render(request, 'reading10.html')
+
+def reading11(request):
+    return render(request, 'reading11.html')
+
 def gtp_reading(request):
     return render(request, 'gtp_reading.html')
+
+def gtp_reading9(request):
+    return render(request, 'gtp_reading9.html')
+
+def gtp_reading10(request):
+    return render(request, 'gtp_reading10.html')
+
+def gtp_reading11(request):
+    return render(request, 'gtp_reading11.html')
 
 def score(request):
     return render(request, 'score.html')
