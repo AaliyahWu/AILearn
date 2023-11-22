@@ -39,9 +39,20 @@ def pic1(request):
 def pic4(request):
     return render(request, 'pic4.html')
 
+def pic_order(request):
+    return render(request, 'pic_order.html')
+
 def reading(request):
     return render(request, 'reading.html')
 
+def reading6(request):
+    return render(request, 'reading6.html')
+
+def reading7(request):
+    return render(request, 'reading7.html')
+
+def reading8(request):
+    return render(request, 'reading8.html')
 def reading9(request):
     return render(request, 'reading9.html')
 
@@ -53,6 +64,15 @@ def reading11(request):
 
 def gtp_reading(request):
     return render(request, 'gtp_reading.html')
+
+def gtp_reading6(request):
+    return render(request, 'gtp_reading6.html')
+
+def gtp_reading7(request):
+    return render(request, 'gtp_reading7.html')
+
+def gtp_reading8(request):
+    return render(request, 'gtp_reading8.html')
 
 def gtp_reading9(request):
     return render(request, 'gtp_reading9.html')
@@ -98,6 +118,15 @@ def score4(request):
     return render(request, 'score4.html')
 def score5(request):
     return render(request, 'score5.html')
+
+def score6(request):
+    return render(request, 'score6.html')
+
+def score7(request):
+    return render(request, 'score7.html')
+
+def score8(request):
+    return render(request, 'score8.html')
 
 def vocabulary(request):
     return render(request, 'vocabulary.html')

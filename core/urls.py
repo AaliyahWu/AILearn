@@ -39,6 +39,16 @@ urlpatterns = [
 
     path('theme/', example_views.theme),  # 學習主選單
     path('pic/', example_views.pic),  # 主題圖片
+    path('pic_order/', example_views.pic_order),
+    path('reading/', example_views.reading),  # 開始描述
+    path('reading6/', example_views.reading6),
+    path('reading7/', example_views.reading7),
+    path('reading8/', example_views.reading8),
+
+    path('gtp_reading/', example_views.gtp_reading),
+    path('gtp_reading6/', example_views.gtp_reading6),
+    path('gtp_reading7/', example_views.gtp_reading7),
+    path('gtp_reading8/', example_views.gtp_reading8),
     path('pic4/', example_views.pic4),
     path('reading/', example_views.reading),  # 開始描述
     path('reading9/', example_views.reading9),
@@ -50,10 +60,10 @@ urlpatterns = [
     path('gtp_reading10/', example_views.gtp_reading10),
     path('gtp_reading11/', example_views.gtp_reading11),
     path('score/', example_views.score),
+    path('score6/', example_views.score6),
+    path('score7/', example_views.score7),
+    path('score8/', example_views.score8),
     path('vocabulary/', example_views.vocabulary),
-
-    path('record/', example_views.record), #錯題本
-    path('record_single/', example_views.record_single), #錯題本
 
     # example_views.py
     path('example/about/', example_views.about),
