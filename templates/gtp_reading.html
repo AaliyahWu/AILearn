@@ -78,12 +78,47 @@
                             <div class="col-md-12 heading-section ftco-animate">
                                 {#       <span class="subheading">Enhanced Your Skills</span>#}
                                 <h4 class="mb-4">What does he look at?</h4>
-                                <p><a class="btn btn-primary">開始錄製</a></p>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and
-                                    Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right
-                                    at the coast of the Semantics, a large language ocean. A small river named Duden
-                                    flows by their place and supplies it with the necessary regelialia.</p>
-                                <p style="text-align: right"><a class="btn btn-primary" href="/score/">完成</a></p>
+
+                                <button class="btn btn-primary" id="start">開始錄音</button>
+                                <button class="btn btn-primary" id="stop">停止錄音</button>
+                                <p id="transcription"></p>
+
+
+                                <script>
+                                    var recognition = new webkitSpeechRecognition();
+                                    recognition.lang = 'en-US';
+                                    recognition.continuous = true;  // 設定錄音為持續模式
+                                    recognition.interimResults = true;
+                                    recognition.maxAlternatives = 1;
+                                    recognition.timeout = 60;  // 設定無聲音輸入的時間長度為 60 秒
+
+
+                                    document.getElementById('start').onclick = function () {
+                                        recognition.start();
+
+                                    };
+
+                                    document.getElementById('stop').onclick = function () {
+                                        recognition.stop();
+
+                                    };
+
+                                    recognition.onresult = function (event) {
+                                        var transcript = event.results[0][0].transcript;
+                                        document.getElementById('transcription').innerText = transcript;
+
+                                        // 將轉錄結果傳送到後端
+                                        fetch('/transcribe/', {
+                                            method: 'POST',
+                                            body: JSON.stringify({'transcript': transcript}),
+                                            headers: {'Content-Type': 'application/json'}
+                                        });
+                                    };
+                                </script>
+                                {#          <p><a class="btn btn-primary">開始錄製</a></p>#}
+                                {#       <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>#}
+                                <p style="text-align: right"><a class="btn btn-primary" href="/example/score/">完成</a>
+                                </p>
                             </div>
                         </div>
                     </div>
