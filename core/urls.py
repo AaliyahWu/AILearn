@@ -21,6 +21,8 @@ from django.contrib.auth import views as dj_auth_views
 from views import views, example_views, chatgpt_views, user_views
 from django.conf.urls import include
 from django.contrib import admin
+from transcription.views import transcribe
+
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
@@ -44,6 +46,9 @@ urlpatterns = [
     path('example/theme/', example_views.theme),
     path('example/pic/', example_views.pic),
     path('example/reading/', example_views.reading),
+    path('transcribe/', transcribe),
+
+
     path('example/gtp_reading/', example_views.gtp_reading),
     path('example/score/', example_views.score),
     path('example/vocabulary/', example_views.vocabulary),
