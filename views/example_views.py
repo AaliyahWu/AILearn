@@ -45,3 +45,7 @@ def score(request):
 
 def vocabulary(request):
     return render(request, 'vocabulary.html')
+def record(request):
+    return render(request, 'record.html')
+def record_single(request):
+    return render(request, 'record_single.html')
