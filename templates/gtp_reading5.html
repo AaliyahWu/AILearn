@@ -33,14 +33,14 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a href="/" class="nav-link">首頁</a></li>
+                <li class="nav-item active"><a href="/" class="nav-link">首頁</a></li>
                 <li class="nav-item"><a href="/user/" class="nav-link">會員資料</a></li>
-                <li class="nav-item active"><a href="/theme/" class="nav-link">學習主選單</a></li>
+                <li class="nav-item"><a href="/theme/" class="nav-link">學習主選單</a></li>
                 <li class="nav-item"><a href="/vocabulary/" class="nav-link">單字本</a></li>
-                <li class="nav-item"><a href="/record/" class="nav-link">錯題本</a></li>
+                <li class="nav-item"><a href="/score/" class="nav-link">錯題本</a></li>
                 <li class="nav-item"><a href="/" class="nav-link">成果報表</a></li>
                 {#                <li class="nav-item"><a href="/login/" class="nav-link">登入</a></li>#}
-                <li class="nav-item"><a href="/logout/" class="nav-link">登出</a></li>
+                <li class="nav-item"><a href="/" class="nav-link">登出</a></li>
             </ul>
         </div>
     </div>
@@ -49,14 +49,14 @@
 
 <section class="hero-wrap hero-wrap-2" style="background-image: url('/static/images/bg_2.jpg');">
     <div class="overlay"></div>
-    <div class="container">
+      <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
-            <div class="col-md-9 ftco-animate pb-5 text-center">
-                {#       <p class="breadcrumbs"><span class="mr-2"><a href="index.html">首頁 <i class="fa fa-chevron-right"></i></a></span> <span>About us <i class="fa fa-chevron-right"></i></span></p>#}
-                <h1 class="mb-0 bread">錯題記錄</h1>
-            </div>
-        </div>
-    </div>
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+{#           <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>About us <i class="fa fa-chevron-right"></i></span></p>#}
+           <h1 class="mb-0 bread">請回答問題形容圖片</h1>
+         </div>
+       </div>
+     </div>
 </section>
 
 
@@ -68,67 +68,59 @@
                     <div class="col-md-6 d-flex">
                         <div class="d-flex about-wrap">
                             <div class="img d-flex align-items-center justify-content-center"
-                                 style="background-image:url(/static/images/image_1.jpg);">
+                                 style="background-image:url(/static/images/trans3.jpeg);">
                             </div>
 
                         </div>
                     </div>
                     <div class="col-md-6 pl-md-5 py-5">
-                        <div class="row justify-content-start pb-3">
-                            <div class="col-md-12 heading-section ftco-animate" style="text-align: center">
+                        <div class="row justify-content-start pb-3" style="text-align: center">
+                            <div class="col-md-12 heading-section ftco-animate">
                                 {#       <span class="subheading">Enhanced Your Skills</span>#}
-                                <h2 class="mb-4">文法訂正與評分</h2>
-                                <p>He have a online class. He is looking at a computer and take a note.</p>
-                                <p>He <span style="color:red;">is having an</span> online class. He is looking at a computer and <span style="color:red;">taking notes</span> .</p>
+                                <h4 class="mb-4">How many people on the bicycle?</h4>
 
-                                <p style="text-align: right"><a href="/theme/" class="btn btn-primary">再次練習</a></p>
+                                <button class="btn btn-primary" id="start">開始錄音</button>
+                                <button class="btn btn-primary" id="stop">停止錄音</button>
+                                <p id="transcription"></p>
+
+
+                                <script>
+                                    var recognition = new webkitSpeechRecognition();
+                                    recognition.lang = 'en-US';
+                                    recognition.continuous = true;  // 設定錄音為持續模式
+                                    recognition.interimResults = true;
+                                    recognition.maxAlternatives = 1;
+                                    recognition.timeout = 60;  // 設定無聲音輸入的時間長度為 60 秒
+
+
+                                    document.getElementById('start').onclick = function () {
+                                        recognition.start();
+
+                                    };
+
+                                    document.getElementById('stop').onclick = function () {
+                                        recognition.stop();
+
+                                    };
+
+                                    recognition.onresult = function (event) {
+                                        var transcript = event.results[0][0].transcript;
+                                        document.getElementById('transcription').innerText = transcript;
+
+                                        // 將轉錄結果傳送到後端
+                                        fetch('/transcribe/', {
+                                            method: 'POST',
+                                            body: JSON.stringify({'transcript': transcript}),
+                                            headers: {'Content-Type': 'application/json'}
+                                        });
+                                    };
+                                </script>
+                                {#          <p><a class="btn btn-primary">開始錄製</a></p>#}
+                                {#       <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>#}
+                                <p style="text-align: right"><a class="btn btn-primary" href="/example/score5/">完成</a>
+                                </p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="ftco-section ftco-counter img" id="section-counter"
-         style="background-image: url(/static/images/bg_4.jpg);">
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-                <div class="block-18 d-flex align-items-center">
-                    <div class="icon"><span class="flaticon-online"></span></div>
-                    <div class="text">
-                        <strong class="number" data-number="80">0</strong>
-                        <span>音量</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-                <div class="block-18 d-flex align-items-center">
-                    <div class="icon"><span class="flaticon-graduated"></span></div>
-                    <div class="text">
-                        <strong class="number" data-number="90">0</strong>
-                        <span>發音</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-                <div class="block-18 d-flex align-items-center">
-                    <div class="icon"><span class="flaticon-instructor"></span></div>
-                    <div class="text">
-                        <strong class="number" data-number="70">0</strong>
-                        <span>流利度</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
-                <div class="block-18 d-flex align-items-center">
-                    <div class="icon"><span class="flaticon-tools"></span></div>
-                    <div class="text">
-                        <strong class="number" data-number="88">0</strong>
-                        <span>總分</span>
                     </div>
                 </div>
             </div>

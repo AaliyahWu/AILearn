@@ -30,6 +30,7 @@ urlpatterns = [
     # view.py
     path('', views.index),
     path('login/', views.login),
+    path('logout/', views.logout),
     path('register/', views.register),
     path('forget/', views.forget),
 
@@ -51,6 +52,9 @@ urlpatterns = [
     path('score/', example_views.score),
     path('vocabulary/', example_views.vocabulary),
 
+    path('record/', example_views.record), #錯題本
+    path('record_single/', example_views.record_single), #錯題本
+
     # example_views.py
     path('example/about/', example_views.about),
     path('example/course/', example_views.course),
@@ -59,9 +63,27 @@ urlpatterns = [
     path('example/contact/', example_views.contact),
     path('example/theme/', example_views.theme),
     path('example/pic/', example_views.pic),
+    path('example/pic1/', example_views.pic1),
     path('example/reading/', example_views.reading),
+    path('example/reading1/', example_views.reading1),
+    path('example/reading2/', example_views.reading2),
+    path('example/reading3/', example_views.reading3),
+    path('example/reading4/', example_views.reading4),
+    path('example/reading5/', example_views.reading5),
     path('example/gtp_reading/', example_views.gtp_reading),
+    path('example/gtp_reading1/', example_views.gtp_reading1),
+    path('example/gtp_reading2/', example_views.gtp_reading2),
+    path('example/gtp_reading3/', example_views.gtp_reading3),
+    path('example/gtp_reading4/', example_views.gtp_reading4),
+    path('example/gtp_reading5/', example_views.gtp_reading5),
     path('example/score/', example_views.score),
+    path('example/score1/', example_views.score1),
+    path('example/score2/', example_views.score2),
+    path('example/score3/', example_views.score3),
+    path('example/score4/', example_views.score4),
+    path('example/score5/', example_views.score5),
+
+
     path('example/vocabulary/', example_views.vocabulary),
     path('example/record/', example_views.record),
     path('example/record_single/', example_views.record_single),

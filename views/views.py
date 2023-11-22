@@ -9,6 +9,10 @@ def login(request):
     return render(request, 'login.html')
 
 # 首頁畫面
+def logout(request):
+    return render(request, 'indexx.html')
+
+# 首頁畫面
 def register(request):
     return render(request, 'register.html')
 

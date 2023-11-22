@@ -33,14 +33,14 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a href="/" class="nav-link">首頁</a></li>
+                <li class="nav-item active"><a href="/" class="nav-link">首頁</a></li>
                 <li class="nav-item"><a href="/user/" class="nav-link">會員資料</a></li>
                 <li class="nav-item"><a href="/theme/" class="nav-link">學習主選單</a></li>
-                <li class="nav-item active"><a href="/vocabulary/" class="nav-link">單字本</a></li>
-                <li class="nav-item"><a href="/record/" class="nav-link">錯題本</a></li>
+                <li class="nav-item"><a href="/vocabulary/" class="nav-link">單字本</a></li>
+                <li class="nav-item"><a href="/score/" class="nav-link">錯題本</a></li>
                 <li class="nav-item"><a href="/" class="nav-link">成果報表</a></li>
                 {#                <li class="nav-item"><a href="/login/" class="nav-link">登入</a></li>#}
-                <li class="nav-item"><a href="/logout/" class="nav-link">登出</a></li>
+                <li class="nav-item"><a href="/" class="nav-link">登出</a></li>
             </ul>
         </div>
     </div>
@@ -52,83 +52,84 @@
     <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
             <div class="col-md-9 ftco-animate pb-5 text-center">
-                {#       <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>About us <i class="fa fa-chevron-right"></i></span></p>#}
-                <h1 class="mb-0 bread">單字本</h1>
+                {#       <p class="breadcrumbs"><span class="mr-2"><a href="index.html">首頁 <i class="fa fa-chevron-right"></i></a></span> <span>About us <i class="fa fa-chevron-right"></i></span></p>#}
+                <h1 class="mb-0 bread">錯題記錄</h1>
             </div>
         </div>
     </div>
 </section>
 
 
-<section class="ftco-section services-section">
+<section class="ftco-section ftco-about img">
     <div class="container">
         <div class="row d-flex">
-
-            <div class="col-md-12">
+            <div class="col-md-12 about-intro">
                 <div class="row">
+                    <div class="col-md-6 d-flex">
+                        <div class="d-flex about-wrap">
+                            <div class="img d-flex align-items-center justify-content-center"
+                                 style="background-image:url(/static/images/image_2.jpg);">
+                            </div>
 
-                    <form action="#" class="search-form">
-                        <div class="form-group">
-                            <span class="icon fa fa-search"></span>
-                            <input type="text" class="form-control" placeholder="Search...">
                         </div>
-                    </form>
+                    </div>
+                    <div class="col-md-6 pl-md-5 py-5">
+                        <div class="row justify-content-start pb-3">
+                            <div class="col-md-12 heading-section ftco-animate" style="text-align: center">
+                                {#       <span class="subheading">Enhanced Your Skills</span>#}
+                                <h2 class="mb-4">文法訂正與評分</h2>
+                                <p>There is a laptop and a phone on the table, there is stickers on the wall.</p>
+                                <p>There is a laptop and <span style="color:red;">some pens</span> on the table, there <span style="color:red;">are some</span> stickers on the wall.</p>
 
+                                <p style="text-align: right"><a href="/theme/" class="btn btn-primary">再次練習</a></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="row">
+            </div>
+        </div>
+    </div>
+</section>
 
-                    <div class="col-md-12 col-lg-12 d-flex align-self-stretch ftco-animate">
-                        <div class="services">
-                            <div class="media-body" style="display: inline">
-                                <h3 style="display: inline">book</h3>&ensp;
-                                <p style="display: inline">n.</p>&ensp;
-                                <p style="display: inline">書</p>
-
-                            </div>
-                        </div>
+<section class="ftco-section ftco-counter img" id="section-counter"
+         style="background-image: url(/static/images/bg_4.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 d-flex align-items-center">
+                    <div class="icon"><span class="flaticon-online"></span></div>
+                    <div class="text">
+                        <strong class="number" data-number="80">0</strong>
+                        <span>音量</span>
                     </div>
-                    <div class="col-md-12 col-lg-12 d-flex align-self-stretch ftco-animate">
-                        <div class="services">
-                            <div class="media-body" style="display: inline">
-                                <h3 style="display: inline">read</h3>&ensp;
-                                <p style="display: inline">v.</p>&ensp;
-                                <p style="display: inline">讀</p>
-
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 d-flex align-items-center">
+                    <div class="icon"><span class="flaticon-graduated"></span></div>
+                    <div class="text">
+                        <strong class="number" data-number="90">0</strong>
+                        <span>發音</span>
                     </div>
-                    <div class="col-md-12 col-lg-12 d-flex align-self-stretch ftco-animate">
-                        <div class="services">
-                            <div class="media-body" style="display: inline">
-                                <h3 style="display: inline">glasses</h3>&ensp;
-                                <p style="display: inline">n.</p>&ensp;
-                                <p style="display: inline">眼鏡</p>
-
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 d-flex align-items-center">
+                    <div class="icon"><span class="flaticon-instructor"></span></div>
+                    <div class="text">
+                        <strong class="number" data-number="70">0</strong>
+                        <span>流利度</span>
                     </div>
-                    <div class="col-md-12 col-lg-12 d-flex align-self-stretch ftco-animate">
-                        <div class="services">
-                            <div class="media-body" style="display: inline">
-                                <h3 style="display: inline">notebook</h3>&ensp;
-                                <p style="display: inline">n.</p>&ensp;
-                                <p style="display: inline">筆記型電腦</p>
-
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 d-flex align-items-center">
+                    <div class="icon"><span class="flaticon-tools"></span></div>
+                    <div class="text">
+                        <strong class="number" data-number="88">0</strong>
+                        <span>總分</span>
                     </div>
-                    <div class="col-md-12 col-lg-12 d-flex align-self-stretch ftco-animate">
-                        <div class="services">
-                            <div class="media-body" style="display: inline">
-                                <h3 style="display: inline">pen</h3>&ensp;
-                                <p style="display: inline">n.</p>&ensp;
-                                <p style="display: inline">筆</p>
-
-                            </div>
-                        </div>
-                    </div>
-
-
                 </div>
             </div>
         </div>
