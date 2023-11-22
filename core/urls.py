@@ -95,8 +95,10 @@ urlpatterns = [
 
 
     path('example/vocabulary/', example_views.vocabulary),
-    path('example/record/', example_views.record),
+    path('record/', example_views.record),
     path('example/record_single/', example_views.record_single),
+    path('example/record_single1/', example_views.record_single1),
+    path('example/record_single2/', example_views.record_single2),
 
     path('transcribe/', transcribe),
 

@@ -134,3 +134,7 @@ def record(request):
     return render(request, 'record.html')
 def record_single(request):
     return render(request, 'record_single.html')
+def record_single1(request):
+    return render(request, 'record_single1.html')
+def record_single2(request):
+    return render(request, 'record_single2.html')
