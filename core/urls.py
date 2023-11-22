@@ -30,6 +30,7 @@ urlpatterns = [
     # view.py
     path('', views.index),
     path('login/', views.login),
+    path('logout/', views.logout),
     path('register/', views.register),
     path('forget/', views.forget),
 
@@ -43,6 +44,9 @@ urlpatterns = [
     path('gtp_reading/', example_views.gtp_reading),
     path('score/', example_views.score),
     path('vocabulary/', example_views.vocabulary),
+
+    path('record/', example_views.record), #錯題本
+    path('record_single/', example_views.record_single), #錯題本
 
     # example_views.py
     path('example/about/', example_views.about),
