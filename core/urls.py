@@ -39,16 +39,35 @@ urlpatterns = [
 
     path('theme/', example_views.theme),  # 學習主選單
     path('pic/', example_views.pic),  # 主題圖片
+    path('pic_order/', example_views.pic_order),
     path('reading/', example_views.reading),  # 開始描述
+    path('reading6/', example_views.reading6),
+    path('reading7/', example_views.reading7),
+    path('reading8/', example_views.reading8),
 
     path('gtp_reading/', example_views.gtp_reading),
-    path('score/', example_views.score),
-    path('vocabulary/', example_views.vocabulary),
+    path('gtp_reading6/', example_views.gtp_reading6),
+    path('gtp_reading7/', example_views.gtp_reading7),
+    path('gtp_reading8/', example_views.gtp_reading8),
+    path('pic4/', example_views.pic4),
+    path('reading/', example_views.reading),  # 開始描述
+    path('reading9/', example_views.reading9),
+    path('reading10/', example_views.reading10),
+    path('reading11/', example_views.reading11),
 
     path('record/', example_views.record),  # 錯題本
     path('record_single/', example_views.record_single),  # 錯題本
 
     path('report/', views.report),  # 報表
+    path('gtp_reading/', example_views.gtp_reading),
+    path('gtp_reading9/', example_views.gtp_reading9),
+    path('gtp_reading10/', example_views.gtp_reading10),
+    path('gtp_reading11/', example_views.gtp_reading11),
+    path('score/', example_views.score),
+    path('score6/', example_views.score6),
+    path('score7/', example_views.score7),
+    path('score8/', example_views.score8),
+    path('vocabulary/', example_views.vocabulary),
 
     # example_views.py
     path('example/about/', example_views.about),
@@ -58,12 +77,35 @@ urlpatterns = [
     path('example/contact/', example_views.contact),
     path('example/theme/', example_views.theme),
     path('example/pic/', example_views.pic),
+    path('example/pic1/', example_views.pic1),
     path('example/reading/', example_views.reading),
+    path('example/reading1/', example_views.reading1),
+    path('example/reading2/', example_views.reading2),
+    path('example/reading3/', example_views.reading3),
+    path('example/reading4/', example_views.reading4),
+    path('example/reading5/', example_views.reading5),
     path('example/gtp_reading/', example_views.gtp_reading),
+    path('example/gtp_reading1/', example_views.gtp_reading1),
+    path('example/gtp_reading2/', example_views.gtp_reading2),
+    path('example/gtp_reading3/', example_views.gtp_reading3),
+    path('example/gtp_reading4/', example_views.gtp_reading4),
+    path('example/gtp_reading5/', example_views.gtp_reading5),
     path('example/score/', example_views.score),
+    path('example/score1/', example_views.score1),
+    path('example/score2/', example_views.score2),
+    path('example/score3/', example_views.score3),
+    path('example/score4/', example_views.score4),
+    path('example/score5/', example_views.score5),
+    path('score9/', example_views.score9),
+    path('score10/', example_views.score10),
+    path('score11/', example_views.score11),
+
+
     path('example/vocabulary/', example_views.vocabulary),
-    path('example/record/', example_views.record),
+    path('record/', example_views.record),
     path('example/record_single/', example_views.record_single),
+    path('example/record_single1/', example_views.record_single1),
+    path('example/record_single2/', example_views.record_single2),
 
     path('transcribe/', transcribe),
 
