@@ -82,6 +82,9 @@ urlpatterns = [
     path('example/score3/', example_views.score3),
     path('example/score4/', example_views.score4),
     path('example/score5/', example_views.score5),
+    path('score9/', example_views.score9),
+    path('score10/', example_views.score10),
+    path('score11/', example_views.score11),
 
 
     path('example/vocabulary/', example_views.vocabulary),

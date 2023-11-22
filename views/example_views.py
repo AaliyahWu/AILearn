@@ -98,6 +98,12 @@ def score4(request):
     return render(request, 'score4.html')
 def score5(request):
     return render(request, 'score5.html')
+def score9(request):
+    return render(request, 'score9.html')
+def score10(request):
+    return render(request, 'score10.html')
+def score11(request):
+    return render(request, 'score11.html')
 
 def vocabulary(request):
     return render(request, 'vocabulary.html')
