@@ -68,100 +68,101 @@
 
     <link rel="stylesheet" href="/static/css/animate.css">
 
-
-     </div>
-   </div>
-   <div class="col-md-6 pl-md-5 py-5">
-    <div class="row justify-content-start pb-3" style="text-align: center">
+{##}
+{#     </div>#}
+{#   </div>#}
+{#   <div class="col-md-6 pl-md-5 py-5">#}
+{#    <div class="row justify-content-start pb-3" style="text-align: center">#}
 {#        <textarea id = "result" rows="8" cols="80"></textarea> <br>#}
 {#    <button id = "start">Start</button>#}
 {#		<button id = "stop">Stop</button>#}
 
-		<script type="text/javascript">
-			var startButton = document.getElementById('start');
-			var stopButton = document.getElementById('stop');
-			var resultElement = document.getElementById('result');
-
-			var recognition = new webkitSpeechRecognition();
-
-			recognition.lang = window.navigator.language;
-			recognition.interimResults = true;
-
-			startButton.addEventListener('click', () => { recognition.start(); });
-			stopButton.addEventListener('click', () => { recognition.stop(); });
-
-			recognition.addEventListener('result', (event) => {
-				const result = event.results[event.results.length - 1][0].transcript;
-				resultElement.textContent = result;
-			});
-		</script>
-      <div class="col-md-12 heading-section ftco-animate">
+{#		<script type="text/javascript">#}
+{#			var startButton = document.getElementById('start');#}
+{#			var stopButton = document.getElementById('stop');#}
+{#			var resultElement = document.getElementById('result');#}
+{##}
+{#			var recognition = new webkitSpeechRecognition();#}
+{##}
+{#			recognition.lang = window.navigator.language;#}
+{#			recognition.interimResults = true;#}
+{##}
+{#			startButton.addEventListener('click', () => { recognition.start(); });#}
+{#			stopButton.addEventListener('click', () => { recognition.stop(); });#}
+{##}
+{#			recognition.addEventListener('result', (event) => {#}
+{#				const result = event.results[event.results.length - 1][0].transcript;#}
+{#				resultElement.textContent = result;#}
+{#			});#}
+{#		</script>#}
+{#        #}
+{#      <div class="col-md-12 heading-section ftco-animate">#}
 {#       <span class="subheading">Enhanced Your Skills</span>#}
-       <h4 class="mb-4">請開始描述圖片</h4>
+{#       <h4 class="mb-4">請開始描述圖片</h4>#}
 {#          <p><a class="btn btn-primary">開始錄製</a></p>#}
-           <div>
-        <audio controls autoplay></audio><br>
-        <input onclick="startRecording()" type="button" value="錄音" class="btn btn-primary"/>
-        <input onclick="stopRecording()" type="button" value="停止" class="btn btn-primary"/>
-        <input onclick="playRecording()" type="button" value="播放" class="btn btn-primary"/>
-        <input onclick="uploadAudio()" type="button" value="提交" class="btn btn-primary"/>
-    </div>
-
-          <script type="text/javascript" src="HZRecorder.js"></script>
-
-
-    <script>
-
-        var recorder;
-
-        var audio = document.querySelector('audio');
-
-        function startRecording() {
-            HZRecorder.get(function (rec) {
-                recorder = rec;
-                recorder.start();
-            });
-        }
-
-        function stopRecording() {
-            recorder.stop();
-        }
-
-        function playRecording() {
-            recorder.play(audio);
-        }
-
-        function uploadAudio() {
-            recorder.upload("Handler1.ashx", function (state, e) {
-                switch (state) {
-                    case 'uploading':
-                        //var percentComplete = Math.round(e.loaded * 100 / e.total) + '%';
-                        break;
-                    case 'ok':
-                        //alert(e.target.responseText);
-                        alert("上傳成功");
-                        break;
-                    case 'error':
-                        alert("上傳失败");
-                        break;
-                    case 'cancel':
-                        alert("上傳被取消");
-                        break;
-                }
-            });
-        }
-
-    </script>
-       <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-        <p style="text-align: right"><a class="btn btn-primary" href="/example/gtp_reading/">下一步</a></p>
-     </div>
-   </div>
- </div>
-</div>
-</div>
-</div>
-</div>
-</section>
+{#           <div>#}
+{#        <audio controls autoplay></audio><br>#}
+{#        <input onclick="startRecording()" type="button" value="錄音" class="btn btn-primary"/>#}
+{#        <input onclick="stopRecording()" type="button" value="停止" class="btn btn-primary"/>#}
+{#        <input onclick="playRecording()" type="button" value="播放" class="btn btn-primary"/>#}
+{#        <input onclick="uploadAudio()" type="button" value="提交" class="btn btn-primary"/>#}
+{#    </div>#}
+{##}
+{#          <script type="text/javascript" src="HZRecorder.js"></script>#}
+{##}
+{##}
+{#    <script>#}
+{##}
+{#        var recorder;#}
+{##}
+{#        var audio = document.querySelector('audio');#}
+{##}
+{#        function startRecording() {#}
+{#            HZRecorder.get(function (rec) {#}
+{#                recorder = rec;#}
+{#                recorder.start();#}
+{#            });#}
+{#        }#}
+{##}
+{#        function stopRecording() {#}
+{#            recorder.stop();#}
+{#        }#}
+{##}
+{#        function playRecording() {#}
+{#            recorder.play(audio);#}
+{#        }#}
+{##}
+{#        function uploadAudio() {#}
+{#            recorder.upload("Handler1.ashx", function (state, e) {#}
+{#                switch (state) {#}
+{#                    case 'uploading':#}
+{#                        //var percentComplete = Math.round(e.loaded * 100 / e.total) + '%';#}
+{#                        break;#}
+{#                    case 'ok':#}
+{#                        //alert(e.target.responseText);#}
+{#                        alert("上傳成功");#}
+{#                        break;#}
+{#                    case 'error':#}
+{#                        alert("上傳失败");#}
+{#                        break;#}
+{#                    case 'cancel':#}
+{#                        alert("上傳被取消");#}
+{#                        break;#}
+{#                }#}
+{#            });#}
+{#        }#}
+{##}
+{#    </script>#}
+{#       <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>#}
+{#        <p style="text-align: right"><a class="btn btn-primary" href="/example/gtp_reading/">下一步</a></p>#}
+{#     </div>#}
+{#   </div>#}
+{# </div>#}
+{#</div>#}
+{#</div>#}
+{#</div>#}
+{#</div>#}
+{#</section>#}
 
 
 <section class="ftco-section ftco-about img">
