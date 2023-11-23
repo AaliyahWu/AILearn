@@ -41,6 +41,12 @@ urlpatterns = [
     path('pic/', example_views.pic),  # 主題圖片
     path('pic_order/', example_views.pic_order),
     path('reading/', example_views.reading),  # 開始描述
+    path('reading1/', example_views.reading1),
+    path('reading2/', example_views.reading2),
+    path('reading3/', example_views.reading3),
+    path('reading4/', example_views.reading4),
+    path('reading5/', example_views.reading5),
+    
     path('reading6/', example_views.reading6),
     path('reading7/', example_views.reading7),
     path('reading8/', example_views.reading8),
